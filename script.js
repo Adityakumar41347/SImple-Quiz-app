@@ -54,7 +54,7 @@ quiz_data = [
         "options": ["try", "catch", "handle", "except"],
         "answer": "except"
     },
-    
+
     {
         "question": "Which of the following is a Python boolean operator?",
         "options": ["and", "plus", "equals", "notEqual"],
@@ -76,28 +76,71 @@ function showQuestion() {
         document.getElementById(`option${i + 1}`).innerHTML = el;
     });
 }
-let correct=0
+let correct = 0
 function submitanswer(obj) {
-    if(currentQuestion>=quiz_data.length-1){
+    if (currentQuestion >= quiz_data.length - 1) {
         console.log("done")
         showresult()
-        return 
+        return
     }
     else if (obj.innerHTML == quiz_data[currentQuestion].answer) {
         correct++;
-         currentQuestion++;
-    showQuestion()
+        currentQuestion++;
+        showQuestion()
     }
     else {
         console.log("wrong")
         currentQuestion++;
-    showQuestion()
+        showQuestion()
     }
-    
-   
+
+
 }
-function showresult(){
+ let saveinnerHTML
+function showresult() {
+    saveinnerHTML=document.getElementsByClassName("container")[0].innerHTML
+    const show = document.createElement("h1")
+    show.innerHTML = `${correct}/${quiz_data.length}`
+    show.style.width = "100%";
+    show.style.height = "100%";
+    show.style.display="flex";
+    show.style.justifyContent="center";
+    show.style.alignItems="center";
+    show.style.fontSize="100px"
+    show.style.color="white"
+    const again=document.createElement("button")
+    again.innerHTML="try again"
+    again.style.backgroundColor="gray"
+    show.setAttribute("class","show")
+
     
+    if (correct > quiz_data.length / 2) {
+        show.style.backgroundColor = "green";
+        
+    }
+    else{
+        show.style.backgroundColor="red"
+    }
+    const container = document.getElementsByClassName("container")[0];
+    container.innerHTML = ""; // clear previous content
+    container.appendChild(show); 
+    container.appendChild(again)
+    again.setAttribute("onclick", "startagain()");
+
+
+}
+function startagain(){
+    currentQuestion=0
+    correct=0
+    console.log(saveinnerHTML)
+    const container = document.getElementsByClassName("container")[0];
+    container.innerHTML = ""; 
+    
+    container.innerHTML=saveinnerHTML
+    console.log(container)
+    
+    showQuestion()
+
 }
 
 showQuestion()
