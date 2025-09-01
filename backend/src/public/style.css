@@ -1,0 +1,81 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #9baaaa, #92abc7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styling */
+.container {
+  background-color: #92a7a4;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Timer styling */
+.timer {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Question styling */
+.question {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Answer buttons */
+.answers button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e7ff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answers button:hover {
+  background-color: #c7d2fe;
+  transform: scale(1.02);
+}
+
+.answers button:active {
+  background-color: #a5b4fc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .answers button {
+    font-size: 0.95rem;
+  }
+}

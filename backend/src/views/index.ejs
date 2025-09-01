@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Choose Your Topic</h1>
+    <div class="topics">
+      <% if (alldata.length > 0) { %>
+        <% alldata.forEach(element => { %>
+          <a href="/quiz/<%= element.topic %>"><%= element.topic %></a>
+        <% }); %>
+      <% } else { %>
+        <p class="no-topics">No topics available at the moment. Please check back later!</p>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0
+}
+body{
+    background:linear-gradient(to right,#6888a9,#a6b6c9 );
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to right, #8eafd1, #5a6e82);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.topics a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.topics a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}

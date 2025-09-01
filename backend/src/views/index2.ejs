@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+   
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <script>
+        let quiz_data = <%- JSON.stringify(quiz_data) %>;
+        console.log(quiz_data);
+    </script>
+    <div class="container">
+        <div class="timer">hey i am timer</div>
+        <div class="question"> hey i am que</div>
+        <div class="answers">
+
+            <button id="option1" onclick="submitanswer(this)">ans1</button>
+            <button id="option2" onclick="submitanswer(this)">ans1</button>
+            <button id="option3" onclick="submitanswer(this)">ans2</button>
+            <button id="option4" onclick="submitanswer(this)">ans3</button>
+        </div>
+        
+    
+    </div>
+</body>
+
+</html>
